@@ -20,3 +20,22 @@ Issues.
 ![image](https://github.com/SCamopby/c4issues/assets/71558036/e8c06ba9-6903-45dc-89aa-195247db7d78)
 # c4issues
 fixes for CFOUR and issues
+
+Update to the source tree of a working installation of CFOUR 2.1
+*	Contents of c4fff.tar. To be untar'd into the install, and make rerun.
+*	*	./qcscf/libvscf.f
+		./libr/reorderdf.f
+		./vscf/moldenorb.f
+		./joda/rdbas.f
+		./cubic/fcubic.f
+		./cubic/wrtzmats2.f
+
+MOLDEN and MOLDEN_NAT files from CFOUR
+	*	Fixes in reorderdf.f correct the coefficients of d,f,g functions. Even if these functions are little populated the files are not useful. Files with 'h' functions are still note useful
+ 	*	Additonal minor fixes in rdbas.f and moldenorb (in moldenorb.f and libvscf.f correct the Occup parameter in the RHF case by making it 2.0 since only Alpha data is written, and that is the expected value in MOLDEN files for that case. This only applies to the SCF molden file; the MOLDEN_NAT file is already written correctly.
+  	*	The fix to rdbas.f consists in commenting out the writing out of an extra [Molden Format] line that causes problems with ORBKIT. (It is also possible to make a fix to ORBKIT to eliminate the problem.)
+
+Westerfield fix (fcubic.f) fix to fcubic.f to write files needed for XGUINEA (VPT2 to XGUINEA for intensities). Per Stanton in forum.
+
+Bauschlicher fix for long atom list. (wrtzmats2.f)
+
