@@ -29,6 +29,7 @@ Update to the source tree of a working installation of CFOUR 2.1
 		./joda/rdbas.f
 		./cubic/fcubic.f
 		./cubic/wrtzmats2.f
+		./libecf/ecpdef.f
 
 MOLDEN and MOLDEN_NAT files from CFOUR
 	*	Fixes in reorderdf.f correct the coefficients of d,f,g functions. Even if these functions are little populated the files are not useful. Files with 'h' functions are still note useful
@@ -38,4 +39,6 @@ MOLDEN and MOLDEN_NAT files from CFOUR
 Westerfield fix (fcubic.f) fix to fcubic.f to write files needed for XGUINEA (VPT2 to XGUINEA for intensities). Per Stanton in forum.
 
 Bauschlicher fix for long atom list. (wrtzmats2.f)
+Fan Wang ECP bug reported onthe forum in libecp/ecpdef.f
+
 
