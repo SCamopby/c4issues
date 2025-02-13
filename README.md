@@ -18,22 +18,22 @@ Issues.
 			§ FCGRADNEW=NEW
 	• Missing files from cubic fcubic.f (Westerfield correction)
 	• Extra [Molden Format] from rdbas.f can cause file to be mis-interpreted and / or rejected
-	• Overflow of array when many atoms in vibrtional analysis Bauschlicher
- 	  ![image](https://github.com/SCamopby/c4issues/assets/71558036/e8c06ba9-6903-45dc-89aa-195247db7d78)
+	• Overflow of array when many atoms in vibrational analysis (Bauschlicher)
+ 	 
 
 # c4issues
 
-fixes for CFOUR and issues
+## Applying fixes to a working CFOUR install
 
 Update to the source tree of a working installation of CFOUR 2.1
 *	Contents of c4fff.tar. To be untar'd into the install, and make rerun.
-*	*	./qcscf/libvscf.f
-		./libr/reorderdf.f
-		./vscf/moldenorb.f
-		./joda/rdbas.f
-		./cubic/fcubic.f
-		./cubic/wrtzmats2.f
-		./libecf/ecpdef.f
+  *	./qcscf/libvscf.f
+  *	./libr/reorderdf.f
+  *	./vscf/moldenorb.f
+  *	./joda/rdbas.f
+  *	./cubic/fcubic.f
+  *	./cubic/wrtzmats2.f
+  *	./libecf/ecpdef.f
 
 MOLDEN and MOLDEN_NAT files from CFOUR
 
@@ -41,7 +41,7 @@ MOLDEN and MOLDEN_NAT files from CFOUR
  
  	*	Additonal minor fixes in rdbas.f and moldenorb (in moldenorb.f and libvscf.f correct the Occup parameter in the RHF case by making it 2.0 since only Alpha data is written. That is the correct value in MOLDEN files for that case. This fix only  applies to the SCF molden file; the MOLDEN_NAT file is already written correctly.
     
-  	*	The fix to rdbas.f consists in commenting out or deleteing the line writing out an extra [Molden Format] line that causes problems with ORBKIT. (It is also possible to make a fix to ORBKIT to eliminate the problem.)
+  	*	The fix to rdbas.f consists in commenting out or deleting the line writing out an extra [Molden Format] line that causes problems with ORBKIT. (It is also possible to make a fix to ORBKIT to eliminate the problem.)
 
 Westerfield fix (fcubic.f) fix to fcubic.f to write files needed for XGUINEA (VPT2 to XGUINEA for intensities). Per Stanton in forum.
 
