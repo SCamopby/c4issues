@@ -12,10 +12,6 @@ Molden-type file output
  
    * Correct results fromn programs like multiwfn, gabedit, orbkit, molden, and others.
 
-  			○ A tar file is provided with the code updates.
-			§ From inside the directory containing a functioning install of CFOUR 2.1, the tar file should be extracted, as
-				□ tar -xvf (dir)/c4fff.tar 
-			§ Then run make to implement the fixes.
 Issues.
 	• Incorrect results with geometry optimization using NCC with ECP.
 		○ GEO opt  CCSD(T) NCC with FROZEN_CORE=ON requires
