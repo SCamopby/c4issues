@@ -4,9 +4,9 @@ Public non-official repository for c4fixes and issues,
 
 Molden-type file output
 
-	• Data in molden and molden_nat files for d, f, g and h functions is corrected.
+• Data in molden and molden_nat files for d, f, g and h functions is corrected.
  
- -  Data for s and p are correct, but if higher functions are present, the wave function or density is incorrectly normalized and not easily corrected. 
+ -  Data for s and p are correct, but if higher functions are present, the wave function or density is defective and not easily corrected. 
 
  Goal
  
